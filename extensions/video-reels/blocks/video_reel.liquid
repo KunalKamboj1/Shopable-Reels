@@ -1,0 +1,19 @@
+<div id="video-widget" 
+  data-shop="{{ shop.permanent_domain }}" 
+  data-api-url="https://{{ block.settings.app_domain }}"
+></div>
+
+<script src="{{ 'widget.js' | asset_url }}" 
+  data-shop="{{ shop.permanent_domain }}" 
+  data-api-url="https://{{ block.settings.app_domain }}"
+  defer></script>
+
+{% schema %}
+{
+  "name": "Shoppable Video Reel",
+  "target": "section",
+  "settings": [
+    { "type": "text", "id": "app_domain", "label": "App Domain (e.g. your-app.fly.dev)", "default": "" }
+  ]
+}
+{% endschema %}
